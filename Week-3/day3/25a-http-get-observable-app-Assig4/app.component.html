@@ -1,0 +1,28 @@
+<div class="container">
+  
+  <form #userdetails = "ngForm" (ngSubmit) = "onClickSubmit(userdetails.value)" >
+   <input type = "text" name = "name" placeholder = "name" ngModel>
+   <br/>
+   <input type = "text" name = "country" placeholder = "country" ngModel>
+   <br/>
+   <input type = "submit" value = "submit">
+</form>
+
+  <h1>Angular 11 Observables HttpClient Example</h1>
+  
+  
+  <table class="table table-bordered" border="1">
+    <tr>
+      <th>Ticket ID</th>
+      <th>Trivel Name</th>
+      <th>From Place</th>
+      <th>To Place</th>
+    </tr>
+    <tr *ngFor="let tkt of Ticket">
+      <td>{{tkt.ticketid}}</td>
+      <td>{{tkt.travelsname}}</td>
+      <td>{{tkt.fromplace}}</td>
+      <td>{{tkt.toplace}}</td>
+    </tr>
+  </table>
+</div>

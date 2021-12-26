@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <script>
+
+    function check(){
+
+        var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       //document.getElementById("responce").innerHTML = xhttp.responseText;
+
+
+
+                     //convert json string into js object
+                     obj = JSON.parse(xhttp.responseText);
+
+                   //for loop 20 times
+                for(let i=0;i<20;i++){
+
+                    document.getElementById("table").innerHTML +=
+                     "<tr><td>"+obj.data[i].id+"</td><td>"+obj.data[i].name+"</td><td>"+obj.data[i].email+"</td><td>"+obj.data[i].status+"</td></tr>";
+
+                }
+
+                    // "<tr><td>"+obj.data[0].id+"</td><td>"+obj.data[0].name+"</td></tr>"
+                   
+                   //obj.data[0].id
+
+
+
+    }
+};
+xhttp.open("GET", "https://gorest.co.in./public/v1/users", true);
+xhttp.send();
+
+        
+    }
+    </script>
+    </head>
+    <body>
+        <div id="div">  This Is Div Section </div>
+        <div id="responce">   </div><br><br>
+
+        <table id="table" border="1">
+
+
+        </table>
+        <input type="button" name="btn1" value="My Rest Call" onclick="check()"/>
+    </body>
+    </html>

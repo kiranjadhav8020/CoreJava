@@ -1,0 +1,19 @@
+<ul>
+  <li *ngFor="let option of options">
+     <input type="checkbox" name="price" [(ngModel)]="option.isChecked"  (change)="changeSelection(option.price)" value= {{option.id}}>{{option.name}}
+  </li>
+</ul>
+
+<div class="col-md-4">
+  <h4>No of Selected checkbox : {{selectedItemsList.length}} </h4>
+  <ul>
+    <li *ngFor="let item of selectedItemsList">
+      
+      {{item.name}}={{item.price}}
+     
+    </li>
+   The Sum Of All Product is= {{sum}}
+  </ul>
+  
+</div>
+ 

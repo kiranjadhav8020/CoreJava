@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <script>
+        function series(){
+            var number=document.getElementById("val1").value;
+            
+
+            let n1 = 0, n2 = 1, nextTerm;
+
+console.log('Fibonacci Series:');
+
+            for (let i = 1; i <= number; i++) {
+                console.log(n1);
+                nextTerm = n1 + n2;
+                n1 = n2;
+                n2 = nextTerm;
+            }
+
+        }
+
+        //Fibonacci Series using Recursion
+    
+     
+     // function returns the Fibonacci number
+     function fib() {
+        var n=document.getElementById("val2").value;
+            
+        var res= fib(n-1) + fib(n-2);
+        document.getElementById("demo").innerHTML=res;
+        
+    }
+   
+     
+
+
+    </script>
+</head>
+<body>
+    <b> Enter  Value</b><input  type="text" id="val1" value="" /><br>
+    <input  type="button" value="series" name="btn" onclick="series()"/><br><br>
+
+    <b> Enter  Value using Recursion</b><input  type="text" id="val2" value="" /><br>
+    <input  type="button" value="series1" name="Recursion" onclick="fib()"/>
+    <div id="demo"> </div>
+</body>
+</html>

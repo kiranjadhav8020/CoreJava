@@ -1,0 +1,2 @@
+#1. Initialize a JSON string of employee, convert string into JSON object, print data of employee
+#2. Create NodeJS Project, install mongodb driver, insert multiple documents into a colelction of some database.
